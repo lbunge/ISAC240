@@ -5,7 +5,7 @@ message = 'j  n332zvp  4p03rzw  zo  4qp  lln3j2  ltysn2  5tuw  wz2  xjvn  4qp  l
 
 # Function takes some message, a key, and whether or not you want to decrypt or encrypt the message
 # Key gets 2 added on even index
-def ceasar(input, key, mode):
+def caesar(input, key, mode):
     output = ''
     loop = 1
     for p in input:
