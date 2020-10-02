@@ -5,7 +5,7 @@ message = '6@ $2a2/.zb/4 ya a5ya a6!2 y 0#!$960ya21 .a/b4492 dy. z26@4 0y//621 #
 
 def readDictionary():
     words = []
-    dictionary = open('dictionary.txt')
+    dictionary = open('dictionary.old')
     for word in dictionary.read().split('\n'):
         words.append(word.lower())
 
