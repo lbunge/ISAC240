@@ -3,7 +3,7 @@ LETTERS_AND_SPACE = ALPHABET + ALPHABET.upper() + ' \t\n'
 
 # Reads txt file containing dictionary words and returns a dictionary object containing the words {<WORD> : None}
 def loadDictionary():
-    dictionaryFile = open('dictionary.txt')
+    dictionaryFile = open('toSort/dictionary.txt')
     englishWords = {}
     for word in dictionaryFile.read().split('\n'):
         englishWords[word] = None
