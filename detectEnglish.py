@@ -3,7 +3,7 @@ LETTERS_AND_SPACE = ALPHABET + ALPHABET.upper() + ' \t\n'
 
 # Reads txt file containing dictionary words and returns a dictionary object containing the words {<WORD> : None}
 def loadDictionary():
-    dictionaryFile = open('toSort/dictionary.txt')
+    dictionaryFile = open('/home/luke/programming/ISAC240/dictionary.txt')
     englishWords = {}
     for word in dictionaryFile.read().split('\n'):
         englishWords[word] = None
@@ -45,7 +45,7 @@ def removeNonLetters(message):
 # 85% of all the characters in the message must be letters or spaces
 # (not punctuation or numbers).
 def isEnglish(message, wordPercentage=20, letterPercentage=85):
-   wordsMatch = getEnglishCount(message) * 100 >= wordPercentage
+    wordsMatch = getEnglishCount(message) * 100 >= wordPercentage
     numLetters = len(removeNonLetters(message))
     messageLettersPercentage = float(numLetters) / len(message) * 100
     lettersMatch = messageLettersPercentage >= letterPercentage
