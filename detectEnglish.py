@@ -3,7 +3,7 @@ LETTERS_AND_SPACE = ALPHABET + ALPHABET.upper() + ' \t\n'
 
 # Reads txt file containing dictionary words and returns a dictionary object containing the words {<WORD> : None}
 def loadDictionary():
-    dictionaryFile = open('/home/luke/programming/ISAC240/dictionary.txt')
+    dictionaryFile = open('dictionary.txt')
     englishWords = {}
     for word in dictionaryFile.read().split('\n'):
         englishWords[word] = None
