@@ -44,7 +44,7 @@ def removeNonLetters(message):
 # By default, 20% of the words must exist in the dictionary file, and
 # 85% of all the characters in the message must be letters or spaces
 # (not punctuation or numbers).
-def isEnglish(message, wordPercentage=20, letterPercentage=85):
+def isEnglish(message, wordPercentage=99, letterPercentage=85):
     wordsMatch = getEnglishCount(message) * 100 >= wordPercentage
     numLetters = len(removeNonLetters(message))
     messageLettersPercentage = float(numLetters) / len(message) * 100

@@ -1,5 +1,5 @@
-KEY1 = 'snmlkjihgfedcbazyxwvutsrqpo'
-KEY2 = 'zyxwvutsrqponmlkjihgfedcba'
+KEY1 = 'snmlkjihgfedcbazyxwvutsrqpo '
+KEY2 = 'zyxwvutsrqponmlkjihgfedcba '
 LETTERS = 'abcdefghijklmnopqrstuvwxyz '
 
 def validateKey (key):
@@ -24,11 +24,11 @@ def encrypt(message, key):
 
 def decrypt(message, key):
     letters = LETTERS
-    key, letters = letters, key
+    letters, key = key, letters
 
     if validateKey(key):
         output = ''
-        for letter in message:
+        for letter in message.lower():
             letterIndex = letters.find(letter)
             output += key[letterIndex]
 

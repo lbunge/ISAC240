@@ -21,4 +21,4 @@ def caesar(input, key, mode):
         
     return output
 
-#print(caesar(message, 21, 'd'))
+# print(caesar(message, 21, 'd'))
