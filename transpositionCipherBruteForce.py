@@ -1,5 +1,5 @@
 import math
-from Reference import transpositionDecrypt, detectEnglish
+import transpositionCipher, detectEnglish
 
 
 def main():
@@ -16,35 +16,13 @@ def main():
     else:
         print(hackedMessage)
 
-
-def decrypt(message, key):
-    numOfColumns = int(math.ceil(len(message) / float(key)))
-    numOfRows = key
-    numOfShadedBoxes = (numOfColumns * numOfRows) - len(message)
-
-    plaintext = [''] * numOfColumns
-
-    column = 0
-    row = 0
-
-    for symbol in message:
-        plaintext[column] += symbol
-        column += 1
-
-        if (column == numOfColumns) or (column == numOfColumns - 1 and row >= numOfRows - numOfShadedBoxes):
-            column = 0
-            row += 1
-
-    return ''.join(plaintext)
-
-
 def bruteForce(cipherText):
     print('Hacking the Gibson...')
 
     for key in range(1, len(cipherText)):
         print('Trying key #%s...' % (key))
 
-        decryptedText = decrypt(key, cipherText)
+        decryptedText = transpositionCipher.decrypt(cipherText, key)
 
         if detectEnglish.isEnglish(decryptedText):
             # Ask user if this is the correct decryption.
